@@ -1,0 +1,15 @@
+{
+  "name": "nexora-3-complete",
+  "version": "3.0.0",
+  "private": true,
+  "description": "NEXORA 3.0 & NEXORA AI Career Intelligence Platform with Interactive Roadmaps & In-App YouTube Studio",
+  "scripts": {
+    "start:backend": "npm --prefix backend start",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "start:springboot": "cd springboot-backend && gradle bootRun",
+    "dev:springboot": "cd springboot-backend && gradle bootRun",
+    "build:springboot": "cd springboot-backend && gradle build -x test"
+  }
+}

@@ -1,0 +1,877 @@
+/* =========================================================================
+   NEXORA 3.0 DEDICATED PORTALS (School Student, College, Fresher)
+   Lumière Palette: Burgundy (#4A1525), Dusty Pink (#D7A7B1), Cream (#F8F4E7)
+   ========================================================================= */
+
+.nx-portal-view {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 10px 4px 60px;
+}
+
+/* -------------------------------------------------------------------------
+   Hero Banner
+   ------------------------------------------------------------------------- */
+.nx-portal-hero {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  background: #FFFDF9;
+  border: 1.5px solid rgba(74, 21, 37, 0.14);
+  border-radius: 16px;
+  padding: 34px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(74, 21, 37, 0.05);
+}
+
+.nx-portal-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #4A1525;
+}
+
+.student-portal .nx-portal-hero::before {
+  background: #4A1525;
+}
+
+.college-portal .nx-portal-hero::before {
+  background: #6A2437;
+}
+
+.fresher-portal .nx-portal-hero::before {
+  background: #320C17;
+}
+
+.nx-portal-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.nx-portal-pill-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nx-portal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: #F4E7EA;
+  color: #4A1525;
+  border: 1px solid #D7A7B1;
+}
+
+.nx-portal-badge.student {
+  background: #F4E7EA;
+  color: #4A1525;
+  border-color: #D7A7B1;
+}
+
+.nx-portal-badge.college {
+  background: #F4E7EA;
+  color: #4A1525;
+  border-color: #D7A7B1;
+}
+
+.nx-portal-badge.fresher {
+  background: #F4E7EA;
+  color: #4A1525;
+  border-color: #D7A7B1;
+}
+
+.nx-portal-grade-tag {
+  font-size: 0.82rem;
+  color: #6E4B53;
+  font-weight: 600;
+}
+
+.nx-portal-hero-content h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #4A1525;
+  margin: 0;
+  font-family: var(--heading, "Playfair Display", Georgia, serif);
+  letter-spacing: -0.4px;
+}
+
+.nx-portal-hero-content h1 em {
+  font-style: italic;
+  font-family: var(--heading, "Playfair Display", Georgia, serif);
+  color: #8B2C42;
+}
+
+.student-portal .nx-portal-hero-content h1 em {
+  color: #8B2C42;
+}
+
+.college-portal .nx-portal-hero-content h1 em {
+  color: #8B2C42;
+}
+
+.fresher-portal .nx-portal-hero-content h1 em {
+  color: #8B2C42;
+}
+
+.nx-portal-hero-content p {
+  font-size: 0.96rem;
+  color: #6E4B53;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.nx-portal-quick-stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 18px;
+  background: #F7EFE4;
+  border: 1px solid rgba(74, 21, 37, 0.12);
+  border-radius: 10px;
+}
+
+.stat-num {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #4A1525;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  color: #6E4B53;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+/* Action Hero Card (Right Side of Banner) */
+.nx-portal-hero-action-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #4A1525;
+  border: 1px solid #350D19;
+  border-radius: 14px;
+  padding: 24px;
+  color: #FFFDF9;
+  box-shadow: 0 8px 24px rgba(74, 21, 37, 0.25);
+}
+
+.action-card-header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.gold-icon, .cyan-icon, .emerald-icon {
+  color: #D7A7B1;
+}
+
+.action-card-header h3 {
+  font-size: 1.1rem;
+  color: #FFFDF9;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.action-card-header p {
+  font-size: 0.88rem;
+  color: #F4E7EA;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.action-card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-portal-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  background: #FFFDF9;
+  color: #4A1525;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-portal-primary:hover {
+  background: #F4E7EA;
+  transform: translateY(-1px);
+}
+
+.btn-portal-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 18px;
+  background: rgba(255, 253, 249, 0.12);
+  color: #FFFDF9;
+  border: 1px solid rgba(255, 253, 249, 0.25);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-portal-secondary:hover {
+  background: rgba(255, 253, 249, 0.22);
+}
+
+/* -------------------------------------------------------------------------
+   Navigation Tab Bar
+   ------------------------------------------------------------------------- */
+.nx-portal-tab-bar {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1.5px solid rgba(74, 21, 37, 0.14);
+  padding-bottom: 14px;
+  overflow-x: auto;
+}
+
+.portal-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  border-radius: 9999px;
+  background: #FFFDF9;
+  color: #6E4B53;
+  border: 1.5px solid rgba(74, 21, 37, 0.15);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.portal-tab:hover {
+  color: #4A1525;
+  background: #F4E7EA;
+  border-color: #D7A7B1;
+}
+
+.portal-tab.active {
+  background: #4A1525;
+  color: #FFFDF9;
+  border-color: #4A1525;
+  font-weight: 700;
+}
+
+/* Alert Banner */
+.nx-portal-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #F4E7EA;
+  border: 1px solid #D7A7B1;
+  border-radius: 10px;
+  color: #4A1525;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------------
+   Section Headers & Forms
+   ------------------------------------------------------------------------- */
+.section-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.section-title-wrap h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #4A1525;
+  font-family: var(--heading, "Playfair Display", Georgia, serif);
+  margin: 0 0 4px;
+}
+
+.section-title-wrap p {
+  font-size: 0.92rem;
+  color: #6E4B53;
+  margin: 0;
+}
+
+/* Add Custom Skill Form */
+.portal-add-skill-form {
+  display: flex;
+  gap: 8px;
+  max-width: 440px;
+  width: 100%;
+}
+
+.portal-add-skill-form input {
+  flex: 1;
+  background: #FFFDF9;
+  border: 1.5px solid rgba(74, 21, 37, 0.2);
+  border-radius: 8px;
+  padding: 9px 14px;
+  color: #2D0F16;
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.portal-add-skill-form input::placeholder {
+  color: #8C6F76;
+}
+
+.portal-add-skill-form input:focus {
+  border-color: #4A1525;
+  box-shadow: 0 0 0 3px rgba(215, 167, 177, 0.35);
+}
+
+.btn-add-skill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  background: #4A1525;
+  color: #FFFDF9;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.btn-add-skill:hover {
+  background: #320C17;
+  transform: translateY(-1px);
+}
+
+/* Current Skills Box */
+.current-skills-box {
+  background: #FFFDF9;
+  border: 1px solid rgba(74, 21, 37, 0.12);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(74, 21, 37, 0.03);
+}
+
+.box-label {
+  display: block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #6E4B53;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.skills-badge-grid {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: #F4E7EA;
+  color: #4A1525;
+  border: 1px solid #D7A7B1;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------------
+   Course & Skill Catalog Cards Grid
+   ------------------------------------------------------------------------- */
+.portal-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.portal-course-card {
+  background: #FFFDF9;
+  border: 1.5px solid rgba(74, 21, 37, 0.12);
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(74, 21, 37, 0.04);
+}
+
+.portal-course-card:hover {
+  border-color: #4A1525;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(74, 21, 37, 0.1);
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-pill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #4A1525;
+  background: #F4E7EA;
+  border: 1px solid #D7A7B1;
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.category-pill.college {
+  color: #4A1525;
+  background: #F4E7EA;
+  border-color: #D7A7B1;
+}
+
+.duration-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: #6E4B53;
+  font-weight: 500;
+}
+
+.portal-course-card h3 {
+  font-size: 1.15rem;
+  color: #4A1525;
+  margin: 0;
+  font-weight: 700;
+  font-family: var(--heading, "Playfair Display", Georgia, serif);
+}
+
+.portal-course-card p {
+  font-size: 0.88rem;
+  color: #6E4B53;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.tech-tags-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  background: #F7EFE4;
+  border: 1px solid rgba(74, 21, 37, 0.1);
+  border-radius: 6px;
+  color: #4A1525;
+  font-weight: 600;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-watch-pointer {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 12px;
+  background: #F4E7EA;
+  color: #4A1525;
+  border: 1px solid #D7A7B1;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-watch-pointer:hover {
+  background: #4A1525;
+  color: #FFFDF9;
+  border-color: #4A1525;
+}
+
+.btn-toggle-skill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 9px 14px;
+  background: #4A1525;
+  color: #FFFDF9;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-toggle-skill:hover {
+  background: #320C17;
+  transform: translateY(-1px);
+}
+
+.btn-toggle-skill.added {
+  background: #F4E7EA;
+  color: #4A1525;
+  border: 1.5px solid #4A1525;
+  cursor: default;
+}
+
+/* -------------------------------------------------------------------------
+   Syllabus & Outline Cards
+   ------------------------------------------------------------------------- */
+.syllabus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+.syllabus-card {
+  background: #FFFDF9;
+  border: 1.5px solid rgba(74, 21, 37, 0.12);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 16px rgba(74, 21, 37, 0.04);
+}
+
+.syllabus-card h3 {
+  font-size: 1.15rem;
+  color: #4A1525;
+  margin: 0;
+  font-weight: 700;
+  font-family: var(--heading, "Playfair Display", Georgia, serif);
+}
+
+.syllabus-card p {
+  font-size: 0.88rem;
+  color: #6E4B53;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.syllabus-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.syllabus-card li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #2D0F16;
+  font-weight: 500;
+}
+
+.green, .gold {
+  color: #4A1525;
+}
+
+.btn-card-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 14px;
+  background: #F4E7EA;
+  color: #4A1525;
+  border: 1px solid #D7A7B1;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-card-link:hover {
+  background: #4A1525;
+  color: #FFFDF9;
+  border-color: #4A1525;
+}
+
+.btn-portal-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: transparent;
+  color: #4A1525;
+  border: 1px solid rgba(74, 21, 37, 0.2);
+  border-radius: 8px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-portal-outline:hover {
+  background: #F4E7EA;
+}
+
+/* -------------------------------------------------------------------------
+   Planner / Schedules
+   ------------------------------------------------------------------------- */
+.planner-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.planner-day-card {
+  background: #FFFDF9;
+  border: 1.5px solid rgba(74, 21, 37, 0.12);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  box-shadow: 0 4px 14px rgba(74, 21, 37, 0.04);
+}
+
+.planner-day-card h4 {
+  font-size: 1.05rem;
+  color: #4A1525;
+  margin: 0;
+  font-weight: 700;
+}
+
+.planner-day-card p {
+  font-size: 0.86rem;
+  color: #6E4B53;
+  margin: 0;
+  flex: 1;
+  line-height: 1.45;
+}
+
+.planner-badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  background: #F4E7EA;
+  color: #4A1525;
+  border: 1px solid #D7A7B1;
+}
+
+.planner-badge.highlight,
+.planner-badge.green {
+  background: #F4E7EA;
+  color: #4A1525;
+  border-color: #D7A7B1;
+}
+
+/* -------------------------------------------------------------------------
+   Job Card for Fresher
+   ------------------------------------------------------------------------- */
+.portal-job-card {
+  background: #FFFDF9;
+  border: 1.5px solid rgba(74, 21, 37, 0.12);
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(74, 21, 37, 0.04);
+}
+
+.portal-job-card:hover {
+  border-color: #4A1525;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(74, 21, 37, 0.1);
+}
+
+.job-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.company-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #6E4B53;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.job-card-top h3 {
+  font-size: 1.15rem;
+  color: #4A1525;
+  margin: 3px 0 0;
+  font-weight: 700;
+  font-family: var(--heading, "Playfair Display", Georgia, serif);
+}
+
+.match-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #4A1525;
+  background: #F4E7EA;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid #D7A7B1;
+  white-space: nowrap;
+}
+
+.job-summary {
+  font-size: 0.88rem;
+  color: #6E4B53;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.job-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.8rem;
+  color: #6E4B53;
+  flex-wrap: wrap;
+  font-weight: 500;
+}
+
+.job-meta-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.salary-text {
+  color: #8B2C42;
+  font-weight: 700;
+}
+
+.job-skills-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.job-skill-chip {
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  background: #F7EFE4;
+  border: 1px solid rgba(74, 21, 37, 0.1);
+  border-radius: 6px;
+  color: #4A1525;
+  font-weight: 600;
+}
+
+.job-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-apply-job {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 18px;
+  background: #4A1525;
+  color: #FFFDF9;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-apply-job:hover {
+  background: #320C17;
+  transform: translateY(-1px);
+}
+
+.btn-apply-job.applied {
+  background: #F4E7EA;
+  color: #4A1525;
+  border: 1.5px solid #4A1525;
+  cursor: default;
+}
+
+.btn-card-link-subtle {
+  font-size: 0.82rem;
+  color: #6E4B53;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.btn-card-link-subtle:hover {
+  color: #4A1525;
+}
+
+@media (max-width: 900px) {
+  .nx-portal-hero {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+}
