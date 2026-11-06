@@ -7,7 +7,7 @@ import {
   SKILL_VIDEO_CATALOG
 } from "../data/nexoraIntelligence.js";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+const API = import.meta.env.VITE_SPRINGBOOT_API_URL || import.meta.env.VITE_API_URL || "http://localhost:8085/api";
 
 const DEFAULT_PROFILE = {
   personaType: "student",

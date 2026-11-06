@@ -1,13 +1,11 @@
-const PRIMARY_API = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
-const SECONDARY_API = "http://localhost:5000/api";
-const SPRINGBOOT_API = import.meta.env.VITE_SPRINGBOOT_API_URL || "http://localhost:8085/api";
+const SPRINGBOOT_API = import.meta.env.VITE_SPRINGBOOT_API_URL || import.meta.env.VITE_API_URL || "http://localhost:8085/api";
 const SPRINGBOOT_API_ALT = "http://localhost:8080/api";
 
 async function request(endpoint, payload) {
   let response;
 
-  // 1. Try Spring Boot backend or Primary Node backend
-  const apiHosts = [PRIMARY_API, SECONDARY_API, SPRINGBOOT_API, SPRINGBOOT_API_ALT];
+  // 1. Try Spring Boot backend
+  const apiHosts = [SPRINGBOOT_API, SPRINGBOOT_API_ALT];
 
   for (const host of apiHosts) {
     try {

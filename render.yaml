@@ -1,22 +1,5 @@
 services:
   # -------------------------------------------------------------
-  # NEXORA 3.0 Node.js Career Intelligence Backend
-  # -------------------------------------------------------------
-  - type: web
-    name: nexora-node-backend
-    env: node
-    plan: free
-    rootDir: backend
-    buildCommand: npm install
-    startCommand: npm start
-    healthCheckPath: /api/health
-    envVars:
-      - key: PORT
-        value: 10000
-      - key: NODE_ENV
-        value: production
-
-  # -------------------------------------------------------------
   # NEXORA 3.0 Spring Boot 3 Backend
   # -------------------------------------------------------------
   - type: web
@@ -29,4 +12,3 @@ services:
     envVars:
       - key: PORT
         value: 10000
-
