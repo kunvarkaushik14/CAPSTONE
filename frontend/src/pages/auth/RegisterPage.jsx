@@ -388,6 +388,8 @@ export default function RegisterPage() {
 
   return (
     <AuthLayout
+      mode="register"
+      userType={selectedPortal}
       eyebrow={portalHeading.toUpperCase()}
       title="Create your account."
       description="Register your credentials. Next, you will answer 6 to 8 quick questions to craft your personalized AI profile."

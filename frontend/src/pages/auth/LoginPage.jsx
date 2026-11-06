@@ -429,6 +429,8 @@ export default function LoginPage() {
 
   return (
     <AuthLayout
+      mode="login"
+      userType={selectedPortal}
       eyebrow={portalHeading.toUpperCase()}
       title="Welcome back."
       description={`Enter your email and credentials to continue to the ${portalHeading}.`}

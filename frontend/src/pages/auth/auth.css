@@ -979,39 +979,46 @@
 }
 
 .nx-auth-input-wrap {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
   gap: 12px;
-  background: #FFFDF9;
-  border: 1.5px solid rgba(74, 21, 37, 0.2);
+  background: #FFFDF9 !important;
+  border: 1.5px solid rgba(74, 21, 37, 0.25) !important;
   border-radius: 8px;
   padding: 10px 14px;
   min-height: 48px;
+  width: 100%;
+  box-sizing: border-box;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .nx-auth-input-wrap:focus-within {
-  border-color: #4A1525;
-  box-shadow: 0 0 0 3px rgba(215, 167, 177, 0.35);
+  border-color: #4A1525 !important;
+  box-shadow: 0 0 0 3px rgba(215, 167, 177, 0.35) !important;
 }
 
 .nx-auth-input-wrap input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  color: #2D0F16;
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  border: none !important;
+  background: transparent !important;
+  color: #2D0F16 !important;
   font-size: 0.92rem;
   font-family: inherit;
   outline: none;
+  min-width: 0;
+  padding: 0;
 }
 
 .nx-auth-input-wrap input::placeholder {
-  color: #9C7D84;
+  color: #9C7D84 !important;
 }
 
 .nx-auth-icon {
-  color: #4A1525;
+  color: #4A1525 !important;
   flex-shrink: 0;
+  display: inline-block;
 }
 
 .nx-auth-toggle-pwd {
@@ -1095,16 +1102,17 @@
 }
 
 .nx-auth-submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
   gap: 10px;
-  width: 100%;
-  padding: 14px 24px;
-  background: #4A1525;
-  color: #FFFDF9;
-  border: none;
-  border-radius: 8px;
+  width: 100% !important;
+  padding: 14px 24px !important;
+  background: #4A1525 !important;
+  color: #FFFDF9 !important;
+  border: none !important;
+  border-radius: 8px !important;
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;

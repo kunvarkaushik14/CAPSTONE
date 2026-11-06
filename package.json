@@ -4,12 +4,12 @@
   "private": true,
   "description": "NEXORA 3.0 Career Intelligence Platform with Multi-Portal Isolation & Spring Boot Backend",
   "scripts": {
-    "start:backend": "cd springboot-backend && gradle bootRun",
-    "dev:backend": "cd springboot-backend && gradle bootRun",
+    "start:backend": "cd springboot-backend && gradlew bootRun --no-daemon",
+    "dev:backend": "cd springboot-backend && gradlew bootRun --no-daemon",
     "dev:frontend": "npm --prefix frontend run dev",
     "build:frontend": "npm --prefix frontend run build",
-    "start:springboot": "cd springboot-backend && gradle bootRun",
-    "dev:springboot": "cd springboot-backend && gradle bootRun",
-    "build:springboot": "cd springboot-backend && gradle build -x test"
+    "start:springboot": "cd springboot-backend && gradlew bootRun --no-daemon",
+    "dev:springboot": "cd springboot-backend && gradlew bootRun --no-daemon",
+    "build:springboot": "cd springboot-backend && gradlew build -x test --no-daemon"
   }
 }

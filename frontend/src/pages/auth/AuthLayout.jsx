@@ -5,7 +5,14 @@ import { Link } from "react-router-dom";
 import Logo from "../../components/common/Logo.jsx";
 import "./auth.css";
 
-export default function AuthLayout({ children, mode = "login", userType = "student" }) {
+export default function AuthLayout({
+  children,
+  eyebrow,
+  title,
+  description,
+  mode = "login",
+  userType = "student"
+}) {
   const isRegister = mode === "register";
 
   const isCollege = userType === "college";
@@ -98,6 +105,13 @@ export default function AuthLayout({ children, mode = "login", userType = "stude
         </div>
 
         <div className="auth-form-wrap">
+          {(eyebrow || title) && (
+            <div className="auth-heading">
+              {eyebrow && <span className="auth-eyebrow">{eyebrow}</span>}
+              {title && <h2>{title}</h2>}
+              {description && <p>{description}</p>}
+            </div>
+          )}
           {children}
         </div>
       </section>
