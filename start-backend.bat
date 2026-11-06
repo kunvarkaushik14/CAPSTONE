@@ -22,3 +22,4 @@ if %errorlevel% neq 0 (
   call gradle bootRun --no-daemon
 )
 pause
+
